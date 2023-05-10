@@ -1,0 +1,144 @@
+/* body::-webkit-scrollbar {
+    display:none;
+} */
+
+.page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* scroll-snap-align: start; */
+}
+
+.container {
+    /* scroll-snap-type: y mandatory; */
+    /* overflow-y: scroll; */
+    height: 100%;
+    /* -webkit-overflow-scrolling: touch;
+    overflow: overlay; */
+}
+
+.index {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: lighter;
+    /* height: 100vh; */
+}
+
+.one {
+    padding: 0;
+    margin: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2b323c;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.text {
+    font-weight: 300;
+    color: #4070F4;
+    font-size: 3rem;
+}
+
+.firstPageText {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: -125px;
+    /* left: -200px; */
+}
+
+.firstPageSecond {
+    position: absolute;
+    top: 10px;
+}
+
+.firstPageText span {
+    display: none;
+}
+
+.desktopText {
+    display: flex;
+    flex-direction: row;
+}
+
+.textType {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 390px;
+    top: 50%;
+    /* left: 200px; */
+    transform: translate(-50%, -50%);
+}
+
+.two {
+    background-color: #2b323c;
+}
+
+.h1White {
+    font-weight: 300;
+    font-size: 3rem;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+@media (min-width: 32rem) {
+    .firstPageText {
+        top: -75px;
+    }
+
+    .firstPageSecond {
+        top: 10px;
+    }
+
+    .textType {
+        width: 100vw;
+    }
+}
+
+@media (min-width: 40rem) {
+    @media(min-height: 31rem) {
+        .container::-webkit-scrollbar-track-piece:start {
+            background: transparent;
+            margin-top: 3.5rem;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            border: .25px solid #7f7f7f;
+        }
+
+        .container::-webkit-scrollbar {
+            display: block;
+            width: 10px;
+            background: #2b323c;
+        }
+          
+        .container::-webkit-scrollbar-thumb {
+            background-color: #bababa;
+            border-radius: 15px;
+        } 
+    }
+
+    .firstPageText {
+        /* left: 50%; */
+    }
+
+    .firstPageText span {
+        display: inline;
+    }
+
+    .firstPageSecond {
+        display: none;
+    }
+
+    .textType {
+        width: 800px;
+        flex-direction: row;
+    }
+}
