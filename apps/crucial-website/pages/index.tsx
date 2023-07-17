@@ -1,24 +1,13 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useMediaQuery } from 'react-responsive';
 import styles from '@/styles/Index.module.css';
 import Typed from "typed.js";
 
-// const { className, styles } = css.resolve`
-//     div {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-//         position: absolute;
-//         width: 390px;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//     }
-// `;
-
 export function Index() {
+    const isMobile = useMediaQuery({ query: `(max-width: 688px)` });
     const firstTargetRef = useRef<HTMLDivElement>(null);
+    const secondTargetRef = useRef<HTMLDivElement>(null);
     const mobileTextRef = useRef(null);
     const textRef = useRef(null);
 
@@ -27,6 +16,8 @@ export function Index() {
         offset: ["end end", "end start"],
     });
 
+    
+
     const scale = useTransform(scrollYProgress, [0, 0.7], [1, 2]);
     const y = useTransform(
         scrollYProgress,
@@ -34,41 +25,22 @@ export function Index() {
         ["50%", "25%", "0%"]
     );
 
-    function IsMobile() {
-		const [size, setSize] = useState([0, 0]);
-		useLayoutEffect(() => {
-		  function updateSize() {
-			setSize([window.innerWidth, window.innerHeight]);
-		  }
-		  window.addEventListener('resize', updateSize);
-		  updateSize();
-		  return () => window.removeEventListener('resize', updateSize);
-		}, []);
-		if (size[0] >= 640) {
-			return false;
-		} else {
-			return true;
-		}
-	}		
-
-	const mobile = IsMobile();
-
     useEffect(() => {
         console.log("yscroll", scrollYProgress);
     }, [scrollYProgress]);
 
     useEffect(() => {
-        console.log("mobile", mobile);
+        console.log("mobile", isMobile);
         let mobileTyped;
         let typed;
-        if (mobile) {
+        if (isMobile) {
             mobileTyped = new Typed(mobileTextRef.current, {
                 strings: ["custom", "affordable", "new"],
                 startDelay: 300,
                 typeSpeed: 200,
                 backDelay: 250,
                 smartBackspace: true,
-                showCursor: true,
+                showCursor: false,
                 loop: true,
             });
         } else {
@@ -78,19 +50,19 @@ export function Index() {
                 typeSpeed: 200,
                 backDelay: 250,
                 smartBackspace: true,
-                showCursor: true,
+                showCursor: false,
                 loop: true,
             });
         }
         
         return () => {
-            if (mobile) {
+            if (isMobile) {
                 mobileTyped.destroy();
             } else {
                 typed.destroy();
             }
         }
-    });
+    }, [isMobile]);
 
     return (
         // <div className="index">
@@ -100,18 +72,33 @@ export function Index() {
                         style={{scale}}
                         className={styles.textType}
                     >
-                        <div className={styles.desktopText}>
-                            <h1 className={`${styles.text} ${styles.firstPageText}`}>
-                                Your website, made 
-                            </h1>
-                            <h1><span className={styles.text} ref={textRef}></span></h1>
-                        </div>
-                        <p className={`${styles.text} ${styles.firstPageSecond}`} ref={mobileTextRef}></p>
+                        {!isMobile &&
+                            <div className={styles.desktopText}>
+                                <h1 className={`${styles.text} ${styles.firstPageText}`}>
+                                    Your website, made 
+                                </h1>
+                                <h1><span className={` ${styles.text} ${styles.firstPageDesktop}`} ref={textRef}></span></h1>
+                            </div>
+                        }
+                        {isMobile &&
+                            <div>
+                                <h1 className={`${styles.text} ${styles.firstPageMobileTextOne}`}>
+                                    Your website,
+                                </h1>
+                                <h1 className={`${styles.text} ${styles.firstPageMobileTextTwo}`}>
+                                    made
+                                </h1>
+                                <p className={`${styles.text} ${styles.firstPageMobile}`} ref={mobileTextRef}></p>
+                            </div>
+                        
+                        }
                     </motion.div>
                 </section>
-                <section className={`${styles.two} ${styles.page}`}>
-                    <h1 className={styles.h1White}>Welcome to Crucial Web Solutions</h1>
-                    <h1 className={styles.h1White}>A new way to meet your website needs</h1>
+                <section ref={secondTargetRef} className={`${styles.two} ${styles.page}`}>
+                    <motion.div>
+                        <h1 className={styles.h1White}>Welcome to Crucial Web Solutions</h1>
+                        <h1 className={styles.h1White}>A new way to meet your website needs</h1>
+                    </motion.div>
                 </section>
                 
             </div>
