@@ -1,116 +1,21 @@
-/* body::-webkit-scrollbar {
-    display:none;
-} */
+.container {
+    height: 100%;
+}
 
 .page {
     height: 100vh;
     display: flex;
     background-color: #2b323c;
     border-color: #2b323c;
-}
-
-.container {
-    /* scroll-snap-type: y mandatory; */
-    /* overflow-y: scroll; */
-    height: 100%;
-    /* -webkit-overflow-scrolling: touch;
-    overflow: overlay; */
+    overflow: hidden;
 }
 
 .index {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: lighter;
-    /* height: 100vh; */
 }
 
-.one {
-    padding: 0;
-    margin: 0;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    overflow-x: hidden;
-    position: relative;
-}
-
-.text {
-    font-weight: 300;
-    color: #4070F4;
-    font-size: 3rem;
-}
-
-.firstPageText {
-    text-align: center;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(calc(-50% - 100px), calc(-50% - 55px));
-    width: 400px;
-}
-
-.firstPageMobileTextOne {
-    text-align: center;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, calc(-50% - 90px));
-    width: 268px;
-}
-
-.firstPageMobileTextTwo {
-    text-align: center;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(calc(-50%), calc(-50% - 30px));
-    width: 350px;
-}
-
-.firstPageDesktop {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(calc(-50% + 210px), calc(-50% - 15px));
-    width: 200px;
-    display: none;
-}
-
-.firstPageMobile {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(calc(-50%), calc(-50% + 20px));
-}
-
-.firstPageText span {
-    display: none;
-}
-
-.desktopText {
-    display: flex;
-    flex-direction: row;
-}
-
-.two {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.h1White {
-    font-weight: 300;
-    font-size: 3rem;
-    color: #fff;
-    margin: 1rem 0;
-    text-align: center;
-}
-
-@media (min-width: 40rem) {
+/* @media (min-width: 40rem) {
     @media(min-height: 31rem) {
         .container::-webkit-scrollbar-track-piece:start {
             background: transparent;
@@ -132,17 +37,4 @@
             border-radius: 15px;
         } 
     }
-}
-
-@media (min-width: 43rem) {
-
-
-    .firstPageMobile {
-        display: none;
-    }
-
-    .firstPageDesktop {
-        display: inline;
-    }
-}
-
+} */
