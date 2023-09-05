@@ -1,4 +1,3 @@
-import { motion, useScroll, useTransform } from "framer-motion";
 import styles from '@/styles/Index.module.css';
 import dynamic from "next/dynamic";
 

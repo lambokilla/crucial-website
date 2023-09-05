@@ -76,18 +76,18 @@ function CustomApp({ Component, pageProps }: AppProps) {
 						</Link>
 					</li>
 					<li className="mobile-nav__item">
-						<Link href="/plans" style={{ textDecoration: 'none' }}>
-							<p className='mobile-nav__link' onClick={() => closeMobileNav()}>Plans</p>
-						</Link>
-					</li>
-					<li className="mobile-nav__item">
 						<Link href="/about" style={{ textDecoration: 'none' }}>
 							<p className='mobile-nav__link' onClick={() => closeMobileNav()}>About Us</p>
 						</Link>
 					</li>
 					<li className="mobile-nav__item">
-						<Link href="/contact" style={{ textDecoration: 'none' }}>
-							<p className='mobile-nav__link' onClick={() => closeMobileNav()}>Contact Us</p>
+						<Link href="/services" style={{ textDecoration: 'none' }}>
+							<p className='mobile-nav__link' onClick={() => closeMobileNav()}>Services</p>
+						</Link>
+					</li>
+					<li className="mobile-nav__item">
+						<Link href="/portfolio" style={{ textDecoration: 'none' }}>
+							<p className='mobile-nav__link' onClick={() => closeMobileNav()}>Portfolio</p>
 						</Link>
 					</li>
 				</ul>

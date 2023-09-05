@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@crucial-website/common": ["libs/common/src/index.ts"],
+      "@crucial-website/functions": ["libs/functions/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
