@@ -49,14 +49,14 @@ export default function IndexSecond() {
 
     return (
         <section className={`${styles.two} ${styles.page}`}>
-            <motion.div ref={targetRef} 
-                style={{ scale, y }}
+            <div ref={targetRef}
+                // style={{ scale, y }}
                 className={styles.box}
             >
                 <h1 className={styles.h1White}>Welcome to Crucial Web Solutions</h1>
                 <h1 className={styles.h1White}>A new way to meet your website needs</h1>
-                <button className={styles.button}>See what we can do for you</button>
-            </motion.div>
+                <button className={styles.button}>Contact Us</button>
+            </div>
         </section>
     )
 }

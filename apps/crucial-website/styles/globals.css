@@ -34,16 +34,16 @@ main {
 .main-header {
     position: fixed;
     height: 3.5rem;
-    width: 100vw;
+    width: calc(100vw);
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     top: 0;
     left: 0;
-    background: #131F47;
+    background: #246594;
     z-index: 10;
-    padding: 0.5rem 1rem;
     display: flex;
-    
+    flex-direction: row;
+
 }
 
 .toggle-button {
@@ -99,7 +99,7 @@ main {
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: space-between; */
     align-items: center;
     flex-direction: row;
 }
@@ -144,18 +144,27 @@ main {
     border: none;
 }
 
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 25px;
+}
+
 @media (min-width: 40rem) {
     @media(min-height: 31rem) {
         .toggle-button {
             display: none;
         }
-        
+
         .main-nav {
             display: flex;
         }
 
         .main-header {
-            height: 2.5rem;
+            height: 3.5rem;
         }
     }
 }

@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import '../public/fonts/style.css';
 import '../styles/globals.css';
 
@@ -67,6 +68,14 @@ function CustomApp({ Component, pageProps }: AppProps) {
 						</li>
 					</ul>
 				</nav>
+				<div className="logo">
+					<Image
+						src="https://crucialwebsitestack-imagebucket6194e37c-105gw6s2x4ta3.s3.us-east-1.amazonaws.com/logoC.svg"
+						alt="logo"
+						height={40}
+						width={40}
+					/>
+				</div>
 			</header>
 			<nav className="mobile-nav">
 				<ul className="mobile-nav__items">

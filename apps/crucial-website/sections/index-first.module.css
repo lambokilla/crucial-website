@@ -9,12 +9,42 @@
 .one {
     padding: 0;
     margin: 0;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     overflow-x: hidden;
     position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1Text {
+    font-size: 3rem;
+    color: white;
+    font-weight: 200;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #efefef;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.pText {
+    font-size: 1.5rem;
+    font-weight: 200;
+    width: 600px;
 }
 
 .text {

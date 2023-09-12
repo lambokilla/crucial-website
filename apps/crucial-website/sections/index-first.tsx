@@ -36,58 +36,66 @@ export default function IndexFirst() {
         console.log("yscroll", scrollYProgress);
     }, [scrollYProgress]);
 
-    useEffect(() => {
-        console.log("mobile", isMobile);
-        let mobileTyped;
-        let typed;
-        if (isMobile) {
-            setTimeout(() => {
-                mobileTyped = new Typed(mobileTextRef.current, {
-                    strings: ["custom", "affordable", "dynamic"],
-                    startDelay: 300,
-                    typeSpeed: 200,
-                    backDelay: 250,
-                    smartBackspace: true,
-                    showCursor: false,
-                    loop: true,
-                });
-            }, 400);
-        } else {
-            setTimeout(() => {
-                typed = new Typed(textRef.current, {
-                    strings: ["custom", "affordable", "dynamic"],
-                    startDelay: 300,
-                    typeSpeed: 200,
-                    backDelay: 250,
-                    smartBackspace: true,
-                    showCursor: false,
-                    loop: true,
-                });
-            }, 400);
-        }
-        
-        return () => {
-            if (isMobile) {
-                mobileTyped.destroy();
-            } else {
-                typed.destroy();
-            }
-        }
-    }, [isMobile]);
+    // useEffect(() => {
+    //     console.log("mobile", isMobile);
+    //     let mobileTyped;
+    //     let typed;
+    //     if (isMobile) {
+    //         setTimeout(() => {
+    //             mobileTyped = new Typed(mobileTextRef.current, {
+    //                 strings: ["custom", "affordable", "dynamic"],
+    //                 startDelay: 300,
+    //                 typeSpeed: 200,
+    //                 backDelay: 250,
+    //                 smartBackspace: true,
+    //                 showCursor: false,
+    //                 loop: true,
+    //             });
+    //         }, 400);
+    //     } else {
+    //         setTimeout(() => {
+    //             typed = new Typed(textRef.current, {
+    //                 strings: ["custom", "affordable", "dynamic"],
+    //                 startDelay: 300,
+    //                 typeSpeed: 200,
+    //                 backDelay: 250,
+    //                 smartBackspace: true,
+    //                 showCursor: false,
+    //                 loop: true,
+    //             });
+    //         }, 400);
+    //     }
+
+    //     return () => {
+    //         if (isMobile) {
+    //             mobileTyped.destroy();
+    //         } else {
+    //             typed.destroy();
+    //         }
+    //     }
+    // }, [isMobile]);
     return (
         <section ref={ref} className={`${styles.one} ${styles.page}`}>
-            <motion.div
-                variants={{
-                    hidden: { opacity: 0, y: 75 },
-                    visible: { opacity: 1, y: 0 }
-                }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 1, delay: 0.25 }}
-                style={{scale, y}}
+            <div
+                // variants={{
+                //     hidden: { opacity: 0, y: 75 },
+                //     visible: { opacity: 1, y: 0 }
+                // }}
+                // initial="hidden"
+                // animate={mainControls}
+                // transition={{ duration: 1, delay: 0.25 }}
+                // style={{ scale, y }}
                 className={styles.textType}
             >
-                {!isMobile &&
+                <div className={styles.containter}>
+                    <h1 className={styles.h1Text}>Website Design and Online Marketing</h1>
+                    <div className={styles.box}>
+                        <p className={styles.pText}>We make custom websites suited for your businesses needs. We help market your site to grow your businesses online presence.</p>
+                    </div>
+
+                </div>
+
+                {/* {!isMobile &&
                     <div className={styles.desktopText}>
                         <h1 className={`${styles.text} ${styles.firstPageText}`}>
                             Your website, made 
@@ -106,8 +114,8 @@ export default function IndexFirst() {
                         <p className={`${styles.text} ${styles.firstPageMobile}`} ref={mobileTextRef}></p>
                     </div>
                 
-                }
-            </motion.div>
+                } */}
+            </div>
             {/* <motion.div
                 variants={{
                     hidden: { left: 0 },
@@ -127,7 +135,7 @@ export default function IndexFirst() {
                     zIndex: 20,
                 }}
             /> */}
-            
+
         </section>
 
     );
