@@ -76,17 +76,7 @@ export default function IndexFirst() {
     // }, [isMobile]);
     return (
         <section ref={ref} className={`${styles.one} ${styles.page}`}>
-            <div
-                // variants={{
-                //     hidden: { opacity: 0, y: 75 },
-                //     visible: { opacity: 1, y: 0 }
-                // }}
-                // initial="hidden"
-                // animate={mainControls}
-                // transition={{ duration: 1, delay: 0.25 }}
-                // style={{ scale, y }}
-                className={styles.textType}
-            >
+            <div className={styles.textType}>
                 <div className={styles.containter}>
                     <h1 className={styles.h1Text}>Website Design and Online Marketing</h1>
                     <div className={styles.box}>
@@ -94,48 +84,7 @@ export default function IndexFirst() {
                     </div>
 
                 </div>
-
-                {/* {!isMobile &&
-                    <div className={styles.desktopText}>
-                        <h1 className={`${styles.text} ${styles.firstPageText}`}>
-                            Your website, made 
-                        </h1>
-                        <h1><span className={` ${styles.text} ${styles.firstPageDesktop}`} ref={textRef}></span></h1>
-                    </div>
-                }
-                {isMobile &&
-                    <div>
-                        <h1 className={`${styles.text} ${styles.firstPageMobileTextOne}`}>
-                            Your website,
-                        </h1>
-                        <h1 className={`${styles.text} ${styles.firstPageMobileTextTwo}`}>
-                            made
-                        </h1>
-                        <p className={`${styles.text} ${styles.firstPageMobile}`} ref={mobileTextRef}></p>
-                    </div>
-                
-                } */}
             </div>
-            {/* <motion.div
-                variants={{
-                    hidden: { left: 0 },
-                    visible: { left: "100%" }
-                }}
-                initial="hidden"
-                animate={slideControls}
-                transition={{ duration: 0.5, ease: "easeIn" }}
-                style={{
-                    position: "absolute",
-                    top: 420,
-                    left: 0,
-                    right: 0,
-                    height: 100,
-                    width: 400,
-                    background: "white",
-                    zIndex: 20,
-                }}
-            /> */}
-
         </section>
 
     );

@@ -56,11 +56,11 @@ function CustomApp({ Component, pageProps }: AppProps) {
 								<p className='main-nav__link'>Services</p>
 							</Link>
 						</li>
-						<li className="main-nav__item">
+						{/* <li className="main-nav__item">
 							<Link href="/portfolio" style={{ textDecoration: 'none' }}>
 								<p className='main-nav__link'>Portfolio</p>
 							</Link>
-						</li>
+						</li> */}
 						<li className="main-nav__item">
 							<Link href="/contact" style={{ textDecoration: 'none' }}>
 								<p className='main-nav__link'>Contact Us</p>
@@ -94,12 +94,19 @@ function CustomApp({ Component, pageProps }: AppProps) {
 							<p className='mobile-nav__link' onClick={() => closeMobileNav()}>Services</p>
 						</Link>
 					</li>
-					<li className="mobile-nav__item">
+					{/* <li className="mobile-nav__item">
 						<Link href="/portfolio" style={{ textDecoration: 'none' }}>
 							<p className='mobile-nav__link' onClick={() => closeMobileNav()}>Portfolio</p>
 						</Link>
-					</li>
+					</li> */}
 				</ul>
+				<div className="flex-end">
+					<button className="contact-btn" onClick={() => closeMobileNav()}>
+						<Link href="/contact" style={{ textDecoration: 'none' }}>
+							<p className="contact-btn-text">Contact Us</p>
+						</Link>
+					</button>
+				</div>
 			</nav>
 
 			<main className="app">

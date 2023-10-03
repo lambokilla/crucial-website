@@ -34,7 +34,7 @@ main {
 .main-header {
     position: fixed;
     height: 3.5rem;
-    width: calc(100vw);
+    width: 100vw;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     top: 0;
@@ -51,10 +51,11 @@ main {
     width: 50px;
     height: 50px;
     display: block;
-    border: 2px solid #cecece;
+    border: 2px solid #ffffff;
     border-radius: 5px;
     padding: 0 5px;
     margin: 0.25rem 0;
+    margin-left: 5px;
     background: transparent;
     /* background: linear-gradient(
     to bottom, 
@@ -69,7 +70,7 @@ main {
 .toggle-button__bar {
     width: 100%;
     height: 5px;
-    background: #cecece;
+    background: #ffffff;
     display: block;
     margin: 10px 0;
 }
@@ -109,7 +110,7 @@ main {
 }
 
 .main-nav__link {
-    color: #eaeaea;
+    color: #ffffff;
     font-size: 1.125rem;
 }
 
@@ -123,13 +124,13 @@ main {
 
 .main-nav__item a:hover,
 .main-nav__item a:active {
-    color: white;
+    color: #ffffff;
     border-bottom: 5px solid white;
 }
 
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
-    color: white;
+    color: #ffffff;
     background: #ff1b68;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -171,20 +172,23 @@ main {
 
 .mobile-nav {
     visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     font-family: 'Source Sans Pro', sans-serif;
     z-index: 101;
     top: 0;
     left: -350px;
-    background: #124559;
+    background: #246594;
     width: 300px;
-    height: 100vh;
+    height: 100dvh;
     transition: 0.5s;
 }
 
 .mobile-nav__items {
     width: 90%;
-    height: 100%;
+    height: 100dvh;
     list-style: none;
     margin: 0 auto;
     padding: 0;
@@ -200,8 +204,42 @@ main {
 }
 
 .mobile-nav__link {
-    color: white;
+    color: #ffffff;
     font-size: 1.5rem;
+}
+
+.flex-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.contact-btn {
+    height: 60px;
+    font-size: 1.5rem;
+    padding: 15px;
+    margin-top: 25px;
+    background-color: #2b323c;
+    border-radius: 15px;
+    border: none;
+    color:  #fff;
+    box-shadow: 2px 2px 5px black;
+}
+
+.contact-btn:hover {
+    cursor: pointer;
+}
+
+.contact-btn:active {
+    transform: scale(.95);
+}
+
+.contact-btn-text {
+    padding: 0;
+    margin: 0;
+    color: #fff;
 }
 
 .open {
