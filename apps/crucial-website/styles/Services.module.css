@@ -11,7 +11,205 @@
     margin: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     overflow-x: hidden;
     position: relative;
     padding-top: 50px;
+}
+
+.h1Text {
+    font-size: 3rem;
+    color: white;
+    font-weight: 200;
+    text-align: center;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.h2Text {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 200;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.box {
+    height: 100px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #efefef;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px black;
+    margin: 0 15px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.flexAuto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.boxOutline {
+    height: auto;
+    width: 300px;
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 15px;
+    margin-top: 20px;
+    z-index: 10;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.boxOutlineText {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.dialogBox {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+}
+
+.webDesignDialog {
+    background-color: transparent;
+    border: 0px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    outline: 0px;
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.dialogText {
+    color: white;
+    font-size: 1.25rem;
+    
+}
+
+.pText {
+    color: black;
+    font-size: 1.25rem;
+}
+
+.heightAdd {
+    height: 100px;
+    animation-name: heightAdd;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.heightRemove {
+    height: 0;
+    animation-name: heightRemove;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.slideOut {
+    animation-name: slideOut;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideIn {
+    0% {
+        top: -100px;
+        transform: translateY(-20px);
+    }
+    100% {
+        top: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        top: 0;
+        transform: translateY(0);
+    }
+    100% {
+        top: -100px;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes heightAdd {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100px;
+    }
+}
+
+@keyframes heightRemove {
+    0% {
+        height: 100px;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 640px) {
+    .box {
+        width: 400px;
+    }
+
+    .flexAuto {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .boxOutline {
+        width: 300px;
+    }
 }

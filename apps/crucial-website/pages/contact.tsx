@@ -79,6 +79,7 @@ export function Contact() {
             setStatus("Error");
         } else {
             const backdrop = document.querySelector(".backdrop");
+            modal.current.classList.add(styles.modal);
 		    backdrop?.classList.add("open");
             backdrop?.classList.add("opacity");
             modal.current.showModal();
@@ -134,9 +135,9 @@ export function Contact() {
     return (
         <div className={styles.container}>
             <div className={styles.backdrop}></div>
-            <dialog className={styles.modal} ref={modal} id="modal">
+            <dialog ref={modal} id="modal">
                 <p className={styles.pText}>Sent! We will get back to you shortly.</p>
-                <Link href="/" style={{ textDecoration: 'none' }} onClick={() => closeModal()}>
+                <Link href="/" style={{ textDecoration: 'none', outline: "none" }} onClick={() => closeModal()}>
                     <p className={styles.btnHome}>Home</p>
                 </Link>
             </dialog>

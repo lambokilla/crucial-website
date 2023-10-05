@@ -21,6 +21,17 @@
     color: white;
     font-weight: 200;
     text-align: center;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.image {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-timing-function: ease-in-out;
 }
 
 .flexAuto {
@@ -55,7 +66,7 @@
     margin-top: 0;
     color: white;
     font-size: 1.25rem;
-
+    padding-right: 10px;
 }
 
 .contactBtn {
@@ -84,6 +95,22 @@
     padding: 0;
     margin: 0;
     color: #fff;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media (min-width: 640px) {

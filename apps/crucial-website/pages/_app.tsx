@@ -42,17 +42,17 @@ function CustomApp({ Component, pageProps }: AppProps) {
 				<nav className="main-nav">
 					<ul className="main-nav__items">
 						<li className="main-nav__item">
-							<Link href="/" style={{ textDecoration: 'none' }}>
+							<Link href="/#" style={{ textDecoration: 'none' }}>
 								<p className='main-nav__link'>Home</p>
 							</Link>
 						</li>
 						<li className="main-nav__item">
-							<Link href="/about" style={{ textDecoration: 'none' }}>
+							<Link href="/about#" style={{ textDecoration: 'none' }}>
 								<p className='main-nav__link'>About Us</p>
 							</Link>
 						</li>
 						<li className="main-nav__item">
-							<Link href="/services" style={{ textDecoration: 'none' }}>
+							<Link href="/services#" style={{ textDecoration: 'none' }}>
 								<p className='main-nav__link'>Services</p>
 							</Link>
 						</li>
@@ -62,7 +62,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
 							</Link>
 						</li> */}
 						<li className="main-nav__item">
-							<Link href="/contact" style={{ textDecoration: 'none' }}>
+							<Link href="/contact#" style={{ textDecoration: 'none' }}>
 								<p className='main-nav__link'>Contact Us</p>
 							</Link>
 						</li>
@@ -80,17 +80,17 @@ function CustomApp({ Component, pageProps }: AppProps) {
 			<nav className="mobile-nav">
 				<ul className="mobile-nav__items">
 					<li className="mobile-nav__item">
-						<Link href="/" style={{ textDecoration: 'none' }}>
+						<Link href="/#" style={{ textDecoration: 'none' }}>
 							<p className='mobile-nav__link' onClick={() => closeMobileNav()}>Home</p>
 						</Link>
 					</li>
 					<li className="mobile-nav__item">
-						<Link href="/about" style={{ textDecoration: 'none' }}>
+						<Link href="/about#" style={{ textDecoration: 'none' }}>
 							<p className='mobile-nav__link' onClick={() => closeMobileNav()}>About Us</p>
 						</Link>
 					</li>
 					<li className="mobile-nav__item">
-						<Link href="/services" style={{ textDecoration: 'none' }}>
+						<Link href="/services#" style={{ textDecoration: 'none' }}>
 							<p className='mobile-nav__link' onClick={() => closeMobileNav()}>Services</p>
 						</Link>
 					</li>
@@ -102,7 +102,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
 				</ul>
 				<div className="flex-end">
 					<button className="contact-btn" onClick={() => closeMobileNav()}>
-						<Link href="/contact" style={{ textDecoration: 'none' }}>
+						<Link href="/contact#" style={{ textDecoration: 'none' }}>
 							<p className="contact-btn-text">Contact Us</p>
 						</Link>
 					</button>
