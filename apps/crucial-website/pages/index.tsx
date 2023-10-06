@@ -3,6 +3,9 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import path from 'path';
+
+path.resolve('./next.config.js');
 
 const Footer = dynamic(() => import('./components/Footer'), { ssr: false });
 
