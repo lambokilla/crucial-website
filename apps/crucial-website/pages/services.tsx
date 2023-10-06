@@ -77,7 +77,6 @@ export default function Services() {
         bool = !bool;
         setSeoDialog(bool);
 
-        console.log(seoPlusRef);
         seoPlusRef.current.classList.toggle(styles.opened);
 
         if (bool) {

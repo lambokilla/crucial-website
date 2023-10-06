@@ -2,7 +2,7 @@ import { createHttpEventRouter } from "@iyio/common";
 import { SNSClient, PublishCommand } from "@aws-sdk/client-sns";
 
 
-const debugging = true;
+const debugging = false;
 
 export const handler = createHttpEventRouter({
     cors: false,

@@ -20,7 +20,6 @@ export function Contact() {
     const [error, setError] = useState("");
     const [status, setStatus] = useState("");
     const [captchaConfirm, setCaptchaConfirm] = useState(false);
-    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const modal = useRef(null);
 
@@ -33,10 +32,10 @@ export function Contact() {
         setEmailError(false);
         setDescriptionError(false);
 
-        // if (!captchaConfirm) {
-        //     setError("Confirm Captcha to continue");
-        //     errors = true;
-        // }
+        if (!captchaConfirm) {
+            setError("Confirm Captcha to continue");
+            errors = true;
+        }
 
         if (!name) {
             setNameError(true);
@@ -69,8 +68,6 @@ export function Contact() {
             phone: phone,
             description: description
         }
-
-        console.log(modal);
 
         const response: Result = await httpClient().postAsync("https://wwhae2muntrb6wseyxdahiu3mm0nnlcl.lambda-url.us-east-1.on.aws/", params);
 
@@ -219,7 +216,7 @@ export function Contact() {
                         style={style(descriptionError)}
                     />
                     <ReCAPTCHA
-                        sitekey="6Lfr5QcoAAAAAFKvmZ803k_5TCVVotvxW2VyVnun"
+                        sitekey="6Lcimn8oAAAAACGFtUS2l9-iRy7ukPCZALA7uayu"
                         onChange={onCaptchaConfirm}
                         className={styles.captcha}
                     />

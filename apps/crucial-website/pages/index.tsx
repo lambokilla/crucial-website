@@ -11,7 +11,7 @@ export function Index() {
     const isLessThan550 = useMediaQuery({ query: `(max-width: 550px)` });
     const isTextMultiline = useMediaQuery({ query: `(max-width: 780px)` });
     const [titleText, setTitleText] = useState("");
-    const [word, setWord] = useState("Website Design and Online Marketing");
+    const [word] = useState("Website Design and Online Marketing");
     let charIndex = 0;
     const [dimensions, setDimensions] = useState({
         height: "180px",
@@ -42,11 +42,9 @@ export function Index() {
                 width: "auto"
             })
         }
-        console.log(isMobile);
-        console.log(isLessThan550);
     }, [isMobile, isLessThan550, isTextMultiline]);
 
-    const typeEffect = () => {
+    const typeEffect = useCallback(() => {
         const currentWord = word;
         const currentChar = currentWord.substring(0, charIndex);
         setTitleText(currentChar);
@@ -55,11 +53,11 @@ export function Index() {
             charIndex++;
             setTimeout(typeEffect, 70);
         }
-    }
+    }, [charIndex, word]);
 
     useEffect(() => {
         typeEffect();
-    }, []);
+    }, [typeEffect]);
 
     return (
         <div className={styles.container}>
