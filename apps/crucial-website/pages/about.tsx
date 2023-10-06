@@ -70,8 +70,8 @@ export function About() {
                 <h1 className={styles.h1Text}>About Crucial Web Solutions</h1>
                 <div className={styles.flexAuto}>
                     <Image
-						src="https://crucialwebsitestack-imagebucket6194e37c-105gw6s2x4ta3.s3.us-east-1.amazonaws.com/logoC.svg"
-						alt="logo"
+						src="https://crucialwebsitestack-imagebucket6194e37c-105gw6s2x4ta3.s3.us-east-1.amazonaws.com/portrait.jpg"
+						alt="me"
 						height={300}
 						width={300}
                         className={styles.image}

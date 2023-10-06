@@ -3,7 +3,7 @@
 }
 
 .page {
-    height: 100dvh;
+    /* height: 100dvh; */
     display: flex;
     background-color: #2b323c;
     overflow: hidden;
@@ -59,6 +59,12 @@
     align-items: center;
 }
 
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .flexColumn {
     display: flex;
     flex-direction: column;
@@ -71,7 +77,6 @@
     width: 300px;
     position: relative;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
     padding: 20px;
@@ -112,7 +117,49 @@
     left: 0;
     top: 0;
     outline: 0px;
-    animation-name: slideIn;
+    animation-name: slideIn120;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.seoDialog {
+    background-color: transparent;
+    border: 0px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    outline: 0px;
+    animation-name: slideIn200;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.onlineMarketingDialog {
+    background-color: transparent;
+    border: 0px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    outline: 0px;
+    animation-name: slideIn150;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.emailListDialog {
+    background-color: transparent;
+    border: 0px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    outline: 0px;
+    animation-name: slideIn200;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
 }
@@ -128,29 +175,160 @@
     font-size: 1.25rem;
 }
 
-.heightAdd {
-    height: 100px;
-    animation-name: heightAdd;
+.closed {
+    .vertical {
+        transition: all 1s ease-in-out;
+        transform: rotate(-90deg);
+    }
+    .horizontal {
+        transition: all 1s ease-in-out;
+        transform: rotate(-90deg);
+        opacity: 1;
+    }
+}
+  
+.opened {
+    opacity: 1;
+    .vertical {
+        transition: all 1s ease-in-out;
+        transform: rotate(90deg);
+    }
+    .horizontal {
+        transition: all 1s ease-in-out;
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+}
+  
+.plusMinus {
+    font-size: 1em;
+    opacity: 0.7;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    margin-top: 2px;
+}
+  
+.plusMinus .horizontal {
+    position: absolute;
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    left: 50%;
+    margin-left: -11px;
+    top: 50%;
+    margin-top: -2.5px;
+}
+.plusMinus .vertical {
+    position: absolute;
+    background-color: white;
+    width: 3px;
+    height: 25px;
+    left: 50%;
+    /* margin-left: -2.5px; */
+    top: 50%;
+    margin-top: -15px;
+}
+.heightAdd120 {
+    height: 120px;
+    animation-name: heightAdd120;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
 }
 
-.heightRemove {
+.heightRemove120 {
     height: 0;
-    animation-name: heightRemove;
+    animation-name: heightRemove120;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
 }
 
-.slideOut {
-    animation-name: slideOut;
+.slideOut120 {
+    animation-name: slideOut120;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
 }
 
-@keyframes slideIn {
+.heightAdd150 {
+    height: 150px;
+    animation-name: heightAdd150;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.heightRemove150 {
+    height: 0;
+    animation-name: heightRemove150;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.slideOut150 {
+    animation-name: slideOut150;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.heightAdd200 {
+    height: 200px;
+    animation-name: heightAdd200;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.heightRemove200 {
+    height: 0;
+    animation-name: heightRemove200;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.slideOut200 {
+    animation-name: slideOut200;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.contactBtn {
+    height: 60px;
+    font-size: 1.5rem;
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: #246594;
+    border-radius: 15px;
+    border: none;
+    color:  #fff;
+    box-shadow: 2px 2px 5px black;
+    animation-name: loadBtn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.contactBtn:hover {
+    cursor: pointer;
+}
+
+.contactBtn:active {
+    transform: scale(.95);
+}
+
+.contactBtnText {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideIn120 {
     0% {
-        top: -100px;
+        top: -120px;
         transform: translateY(-20px);
     }
     100% {
@@ -159,29 +337,109 @@
     }
 }
 
-@keyframes slideOut {
+@keyframes slideOut120 {
     0% {
         top: 0;
         transform: translateY(0);
     }
     100% {
-        top: -100px;
+        top: -120px;
         transform: translateY(-20px);
     }
 }
 
-@keyframes heightAdd {
+@keyframes heightAdd120 {
     0% {
         height: 0;
     }
     100% {
-        height: 100px;
+        height: 120px;
     }
 }
 
-@keyframes heightRemove {
+@keyframes heightRemove120 {
     0% {
-        height: 100px;
+        height: 120px;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes slideIn150 {
+    0% {
+        top: -150px;
+        transform: translateY(-20px);
+    }
+    100% {
+        top: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut150 {
+    0% {
+        top: 0;
+        transform: translateY(0);
+    }
+    100% {
+        top: -150px;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes heightAdd150 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 150px;
+    }
+}
+
+@keyframes heightRemove150 {
+    0% {
+        height: 150px;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes slideIn200 {
+    0% {
+        top: -200px;
+        transform: translateY(-20px);
+    }
+    100% {
+        top: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut200 {
+    0% {
+        top: 0;
+        transform: translateY(0);
+    }
+    100% {
+        top: -200px;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes heightAdd200 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 200px;
+    }
+}
+
+@keyframes heightRemove200 {
+    0% {
+        height: 200px;
     }
     100% {
         height: 0;
@@ -198,7 +456,7 @@
     }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 740px) {
     .box {
         width: 400px;
     }
@@ -211,5 +469,9 @@
 
     .boxOutline {
         width: 300px;
+    }
+
+    .page {
+        height: 100dvh;
     }
 }
