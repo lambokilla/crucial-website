@@ -91,6 +91,10 @@
     animation-timing-function: ease-in-out;
 }
 
+.boxOutline:hover {
+    cursor: pointer;
+}
+
 .boxOutlineText {
     font-size: 1.5rem;
     color: white;
