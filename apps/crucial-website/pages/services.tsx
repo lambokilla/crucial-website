@@ -219,7 +219,7 @@ export default function Services() {
                     </div>
                 </div>
                 <button ref={btnRef} className={styles.contactBtn}>
-                    <Link href="/contact" style={{ textDecoration: 'none' }}>
+                    <Link href="/contact#" style={{ textDecoration: 'none' }}>
                         <p className={styles.contactBtnText}>Contact Us</p>
                     </Link>
                 </button>

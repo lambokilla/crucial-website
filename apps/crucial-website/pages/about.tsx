@@ -95,7 +95,7 @@ export function About() {
                 </div>
                 <div className={styles.center}>
                     <button ref={btnRef} className={styles.contactBtn}>
-                        <Link href="/contact" style={{ textDecoration: 'none' }}>
+                        <Link href="/contact#" style={{ textDecoration: 'none' }}>
                             <p className={styles.contactBtnText}>Contact Us</p>
                         </Link>
                     </button>
