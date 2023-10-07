@@ -61,7 +61,7 @@ export function About() {
     useEffect(() => {
         setTimeout(() => {
             setImageOpacity("1");
-        }, 3000);
+        }, 3500);
     });
 
     return (
