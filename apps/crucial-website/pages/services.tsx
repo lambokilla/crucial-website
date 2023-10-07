@@ -158,7 +158,7 @@ export default function Services() {
                             </div>
                             <div ref={webDesignContainerRef} className={styles.dialogBox}>
                                 <dialog ref={webDesignRef} className={styles.webDesignDialog}>
-                                    <p className={styles.dialogText}>We can cater to all you web design needs. From a simple home page to 
+                                    <p className={styles.dialogText}>We can cater to all your web design needs. From a simple home page to 
                                     a sophisticated eCommerce site, we can do it.
                                     </p>
                                 </dialog>
