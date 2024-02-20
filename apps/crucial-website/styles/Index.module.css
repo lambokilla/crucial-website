@@ -4,6 +4,7 @@
 }
 
 .page {
+    min-height: 800px;
     height: 100dvh;
     display: flex;
     background-color: #2b323c;

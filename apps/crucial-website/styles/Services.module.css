@@ -3,6 +3,7 @@
 }
 
 .page {
+    min-height: 100dvh;
     /* height: 100dvh; */
     display: flex;
     background-color: #2b323c;
@@ -477,5 +478,13 @@
 
     .page {
         height: 100dvh;
+    }
+}
+
+@media (max-height: 650px) {
+    @media (min-width: 740px) {
+        .page {
+            min-height: 850px;
+        }
     }
 }

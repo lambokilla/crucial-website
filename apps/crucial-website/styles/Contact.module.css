@@ -5,6 +5,8 @@
 }
 
 .page {
+    min-height: 800px;
+    height: 100dvh;
     background-color: #2b323c;
     overflow: hidden;
     padding: 0;
@@ -158,14 +160,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
     padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .captcha {
     padding-top: 20px;
-    margin-left: -6px;
+    /* margin-left: -6px; */
+    display: flex;
+    justify-content: center;
     animation-name: captcha;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;

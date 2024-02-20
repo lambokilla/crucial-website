@@ -215,11 +215,12 @@ export function Contact() {
                         value={description}
                         style={style(descriptionError)}
                     />
-                    <ReCAPTCHA
-                        sitekey="6Lcimn8oAAAAACGFtUS2l9-iRy7ukPCZALA7uayu"
-                        onChange={onCaptchaConfirm}
-                        className={styles.captcha}
-                    />
+                    <div className={styles.captcha}>
+                        <ReCAPTCHA
+                            sitekey="6Lcimn8oAAAAACGFtUS2l9-iRy7ukPCZALA7uayu"
+                            onChange={onCaptchaConfirm}
+                        />
+                    </div>
                     <div className={styles.flexEnd}>
                         <button className={styles.btn} type='submit'>Submit</button>
                     </div>
