@@ -1,5 +1,6 @@
 import { contactFuncUrlParam, contactTopicArnParam, defaultRegionParam, imageBucketParam } from "../../libs/common/src/index";
 import * as cdk from 'aws-cdk-lib';
+import * as iam from "aws-cdk-lib/aws-iam";
 import * as lambda from "aws-cdk-lib/aws-lambda";
 import * as lambdaNode from "aws-cdk-lib/aws-lambda-nodejs";
 import * as s3 from "aws-cdk-lib/aws-s3";
@@ -17,6 +18,27 @@ export class CdkStack extends cdk.Stack {
 
 		this.params.setParam(defaultRegionParam, this.region);
 
+        // Create stripe-checkout-func
+        const { func: stripeCheckoutFunc, url: stripeCheckoutFuncUrl } = this.createFunctionAndUrl("stripe-checkout", {
+            createPublicUrl: true,
+            timeout: cdk.Duration.minutes(1),
+        });
+
+        const secretArns = `arn:aws:secretsmanager:${this.region}:${this.account}:secret:*`;
+
+        // Allow stripe-checkout-func to access secretsmanager values
+        stripeCheckoutFunc.addToRolePolicy(
+            new iam.PolicyStatement({
+                actions: [
+                    "secretsmanager:GetSecretValue"
+                ],
+                resources: [
+                    secretArns
+                ],
+            })
+        );
+
+        // Create contact func
         const { func: contactFunc, url: contactFuncUrl } = this.createFunctionAndUrl("contact", {
             createPublicUrl: true,
             timeout: cdk.Duration.minutes(1),
